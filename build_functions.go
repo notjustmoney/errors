@@ -1,5 +1,9 @@
 package errors
 
+func New(message string) error {
+	return newBuilder().Error(message)
+}
+
 func Wrap(err error) error {
 	return newBuilder().Wrap(err)
 }
